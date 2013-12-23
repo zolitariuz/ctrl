@@ -1,0 +1,444 @@
+/*
+Theme Name: Ctrl
+Theme URI: http://zamacona.me
+Author: @zolitriuz
+Author URI: http://zamacona.me
+Description: Tema de WordPress Personalizado para Creative Ctrl
+Version: 1.0
+*/
+@charset 'utf-8';
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+/* line 18, style.less */
+html {
+  color: #000;
+  background: #ffffff;
+}
+/* line 18, style.less */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+/* line 18, style.less */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 18, style.less */
+fieldset,
+img {
+  border: 0;
+}
+/* line 18, style.less */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 18, style.less */
+ol,
+ul {
+  list-style: none;
+}
+/* line 18, style.less */
+caption,
+th {
+  text-align: left;
+}
+/* line 18, style.less */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+/* line 18, style.less */
+q:before,
+q:after {
+  content: '';
+}
+/* line 18, style.less */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+/* line 18, style.less */
+sup {
+  vertical-align: text-top;
+}
+/* line 18, style.less */
+sub {
+  vertical-align: text-bottom;
+}
+/* line 18, style.less */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+/* line 18, style.less */
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+/* line 18, style.less */
+legend {
+  color: #000000;
+}
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+/* line 27, style.less */
+body {
+  font: 13px/1.231 arial, helvetica, clean, sans-serif;
+  *font-size: small;
+  *font: x-small;
+}
+/* line 27, style.less */
+select,
+input,
+button,
+textarea {
+  font: 99% arial, helvetica, clean, sans-serif;
+}
+/* line 27, style.less */
+table {
+  font-size: inherit;
+  font: 100%;
+}
+/* line 27, style.less */
+pre,
+code,
+kbd,
+samp,
+tt {
+  font-family: monospace;
+  *font-size: 108%;
+  line-height: 100%;
+}
+/*
+YUI 3.4.1 (build 4118)
+Copyright 2011 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+/* line 36, style.less */
+h1 {
+  font-size: 138.5%;
+}
+/* line 36, style.less */
+h2 {
+  font-size: 123.1%;
+}
+/* line 36, style.less */
+h3 {
+  font-size: 108%;
+}
+/* line 36, style.less */
+h1,
+h2,
+h3 {
+  margin: 1em 0;
+}
+/* line 36, style.less */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: bold;
+}
+/* line 36, style.less */
+abbr,
+acronym {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+/* line 36, style.less */
+em {
+  font-style: italic;
+}
+/* line 36, style.less */
+blockquote,
+ul,
+ol,
+dl {
+  margin: 1em;
+}
+/* line 36, style.less */
+ol,
+ul,
+dl {
+  margin-left: 2em;
+}
+/* line 36, style.less */
+ol {
+  list-style: decimal outside;
+}
+/* line 36, style.less */
+ul {
+  list-style: disc outside;
+}
+/* line 36, style.less */
+dl dd {
+  margin-left: 1em;
+}
+/* line 36, style.less */
+th,
+td {
+  border: 1px solid #000;
+  padding: 0.5em;
+}
+/* line 36, style.less */
+th {
+  font-weight: bold;
+  text-align: center;
+}
+/* line 36, style.less */
+caption {
+  margin-bottom: .5em;
+  text-align: center;
+}
+/* line 36, style.less */
+p,
+fieldset,
+table,
+pre {
+  margin-bottom: 1em;
+}
+/* line 36, style.less */
+input[type=text],
+input[type=password],
+textarea {
+  width: 12.25em;
+  *width: 11.9em;
+}
+/*HTML5 element display*/
+/* line 38, style.less */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+/*Figures*/
+/* line 40, style.less */
+figure {
+  margin: 0;
+}
+/* Utilities */
+/* line 43, style.less */
+.lst_reset,
+.lst_reset li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 44, style.less */
+.clear {
+  clear: both;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  line-height: 0;
+}
+/* line 45, style.less */
+* {
+  box-sizing: border-box;
+}
+/*** FONT FACE ***/
+@font-face {
+  font-family: 'gotham-bold';
+  src: url('gotham-bold-webfont.eot');
+  src: url('gotham-bold-webfont.eot?#iefix') format('embedded-opentype'), url('gotham-bold-webfont.woff') format('woff'), url('gotham-bold-webfont.ttf') format('truetype'), url('gotham-bold-webfont.svg#gothambold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gotham-medium';
+  src: url('fonts/gotham-medium-webfont.eot');
+  src: url('fonts/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/gotham-medium-webfont.woff') format('woff'), url('fonts/gotham-medium-webfont.ttf') format('truetype'), url('fonts/gotham-medium-webfont.svg#gothambold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gotham-light';
+  src: url('fonts/gotham-light-webfont.eot');
+  src: url('fonts/gotham-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/gotham-light-webfont.woff') format('woff'), url('fonts/gotham-light-webfont.ttf') format('truetype'), url('fonts/gotham-light-webfont.svg#gothamlight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gandhi-serif';
+  src: url('fonts/gandhiserif-regular-webfont.eot');
+  src: url('fonts/gandhiserif-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/gandhiserif-regular-webfont.woff') format('woff'), url('fonts/gandhiserif-regular-webfont.ttf') format('truetype'), url('fonts/gandhiserif-regular-webfont.svg#gandhi_serifregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gandhi-serifitalic';
+  src: url('fonts/gandhiserif-italic-webfont.eot');
+  src: url('fonts/gandhiserif-italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/gandhiserif-italic-webfont.woff') format('woff'), url('fonts/gandhiserif-italic-webfont.ttf') format('truetype'), url('fonts/gandhiserif-italic-webfont.svg#gandhi_serifitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*** VARIABLES ***/
+/*** MIXINS ***/
+/*** FRAMEWORK ***/
+/* line 138, style.less */
+.clearfix {
+  zoom: 1;
+}
+/* line 140, style.less */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 144, style.less */
+.clearfix:after {
+  clear: both;
+}
+/* line 149, style.less */
+.block {
+  display: block;
+}
+/* line 150, style.less */
+.inline {
+  display: inline;
+}
+/* line 152, style.less */
+.first {
+  margin-left: 0;
+  padding-left: 0;
+}
+/* line 153, style.less */
+.last {
+  margin-right: 0;
+  padding-right: 0;
+}
+/* line 155, style.less */
+.left {
+  float: left;
+}
+/* line 156, style.less */
+.right {
+  float: right;
+}
+/* line 158, style.less */
+.width {
+  width: 1024px;
+  margin: auto;
+}
+/* line 161, style.less */
+.cuarto {
+  width: 21%;
+  margin: 0 2%;
+}
+/* line 162, style.less */
+.tercio {
+  width: 31%;
+  margin: 0 1%;
+}
+/* line 164, style.less */
+.center {
+  text-align: center;
+}
+/* line 166, style.less */
+.centro-absoluto {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/* line 167, style.less */
+.in-centro-absoluto {
+  display: block;
+  width: auto;
+  margin-top: -5%;
+  margin-left: -50%;
+}
+/*** GENERAL ***/
+/* line 170, style.less */
+.container {
+  width: 100%;
+  border-top: 5px solid #f38f1d;
+}
+/*** HEADER ***/
+/* line 174, style.less */
+h1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+}
+/* line 176, style.less */
+.menu {
+  margin: 0;
+  list-style: none;
+}
+/* line 177, style.less */
+.menu li {
+  float: left;
+}
+/* line 178, style.less */
+.menu li a {
+  color: #f38f1d;
+}
