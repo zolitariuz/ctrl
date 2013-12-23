@@ -1,8 +1,18 @@
 module.exports = function(grunt) {
 
+   'use strict';
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    settings: {
+        // Configurable paths
+        dir: {
+            src: 'themes/ctrl/',
+            dist: 'themes/ctrl/'
+        }
+    },
 
     jshint: {
       all: ['*.js']
@@ -15,8 +25,8 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'themes/ctrl/js/<%= pkg.name %>.min.js': ['themes/ctrl/js/<%= pkg.name %>.js'],
-          'themes/ctrl/js/plugins.min.js': ['themes/ctrl/js/plugins.js']
+          '<%= settings.dir.src %>js/<%= pkg.name %>.min.js': ['<%= settings.dir.src %>js/<%= pkg.name %>.js'],
+          '<%= settings.dir.src %>js/plugins.min.js': ['<%= settings.dir.src %>js/plugins.js']
         }
       }
     },
@@ -29,7 +39,7 @@ module.exports = function(grunt) {
         report: 'min'
       },
       files: {
-        "themes/ctrl/style.css": "themes/ctrl/style.less"
+        "<%= settings.dir.src %>style.css": "<%= settings.dir.src %>style.less"
       }
     },
 
@@ -39,35 +49,72 @@ module.exports = function(grunt) {
           optimizationLevel: 3
         },
         files: {                         // Dictionary of files
-          //'themes/ctrl/images/*.png': 'themes/ctrl/images/*.png', // 'destination': 'source'
-          //'themes/ctrl/images/*.jpg': 'themes/ctrl/images/*.jpg',
-          //'themes/ctrl/images/*.gif': 'themes/ctrl/images/*.gif'
+          //'<%= settings.dir.src %>images/*.png': '<%= settings.dir.src %>images/*.png', // 'destination': 'source'
+          //'<%= settings.dir.src %>images/*.jpg': '<%= settings.dir.src %>images/*.jpg',
+          //'<%= settings.dir.src %>images/*.gif': '<%= settings.dir.src %>images/*.gif'
         }
       },
       dynamic: {                         // Another target
         files: [{
           expand: true,                  // Enable dynamic expansion
-          cwd: 'themes/ctrl/images/',                   // Src matches are relative to this path
+          cwd: '<%= settings.dir.src %>images/',                   // Src matches are relative to this path
           src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'themes/ctrl/images/'    // Destination path prefix
+          dest: '<%= settings.dir.src %>images/'    // Destination path prefix
         }]
       }
+    },
+
+    connect: {
+        options: {
+            hostname: 'localhost',  // → Change this to '0.0.0.0' if
+                                    // the server needs to be access
+                                    // from outside of the LAN
+            livereload: 35729,
+            port: 8888              // → 8080 is used as it is the official
+                                    // alternate to port 80 (default port
+                                    // for HTTP), and it doesn't require
+                                    // root access:
+                                    // http://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
+        },
+        livereload: {
+            options: {
+                base: '../',
+
+                // Automatically open the webpage in the default browser
+                open: true
+            }
+        },
+    },
+
+    watch: {
+        files: '<%= settings.dir.src %>/**',
+        less: {
+          // We watch and compile less files as normal but don't live reload here
+          files: ['src/less/*.less'],
+          tasks: ['less'],
+        },
+        options: {
+            livereload: '<%= connect.options.livereload %>'
+        },
+        scripts: {
+            files: ['<%= settings.dir.src %>/js/*.js', 'css/**/*.scss' ],
+            tasks: 'default',
+            options: {
+                spawn: false,
+            }
+        }
     }
   });
 
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-
-  // LESS
-  grunt.loadNpmTasks('grunt-contrib-less');
-
-  // JS Hint
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-
-  //Optimize Images
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  // Load Grunt tasks automatically
+  require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
 
   // Default task(s).
   grunt.registerTask('default', ['jshint','uglify','less','imagemin']);
 
+  // development task
+  grunt.registerTask('dev', [
+      'connect:livereload',
+      'watch'
+  ]);
 };
