@@ -1,0 +1,16 @@
+{
+  "name": "ctrl",
+  "version": "0.1.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+  	"grunt": "latest",
+	"grunt-cli": "latest",
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-watch": "latest"
+  }
+}
