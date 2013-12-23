@@ -17,15 +17,17 @@
 		<![endif]-->
 		<div class="container">
 
-			<div class="width" >
+				<div id="centrar">
+					<h1>
+						<a href="<?php echo home_url(); ?>">
+							<img src="<?php echo THEMEPATH; ?>images/ctrl-logo.png" alt="Creative Ctrl" />
+						</a>
+					</h1>
+				</div>
 
-				<h1 class="center" >
-					<a href="<?php echo home_url(); ?>">
-						<img src="<?php echo THEMEPATH; ?>images/ctrl-logo.png" alt="Creative Ctrl" />
-					</a>
-				</h1>
+				<div class="clear"></div>
 
-				<nav class="menu">
+				<nav class="menu width">
 					<ul class="clearfix menu" >
 						<li class="first" ><a href="#">Servicios</a></li>
 						<li><a href="#">Clientes</a></li>
@@ -35,7 +37,6 @@
 					</ul>
 				</nav>
 
-			</div>
 
 
 
