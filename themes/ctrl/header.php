@@ -17,25 +17,29 @@
 		<![endif]-->
 		<div class="container">
 
-				<div id="centrar">
+			<div class="seccion header">
+
+				<div class="centrar">
 					<h1>
 						<a href="<?php echo home_url(); ?>">
 							<img src="<?php echo THEMEPATH; ?>images/ctrl-logo.png" alt="Creative Ctrl" />
 						</a>
 					</h1>
-				</div>
-
-				<div class="clear"></div>
+				</div><!-- centrar -->
 
 				<nav class="menu width">
-					<ul class="clearfix menu" >
-						<li class="first" ><a href="#">Servicios</a></li>
+					<ul class="clearfix" >
+						<li><a href="#">Servicios</a></li>
 						<li><a href="#">Clientes</a></li>
 						<li><a href="#">Planta</a></li>
 						<li><a href="#">Nosotros</a></li>
-						<li class="last"><a href="#">Contacto</a></li>
+						<li><a class="last" href="#">Contacto</a></li>
 					</ul>
 				</nav>
+
+			</div><!-- header -->
+
+
 
 
 

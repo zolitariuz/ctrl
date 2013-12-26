@@ -49,11 +49,11 @@ figure {margin: 0;}
 
 @font-face {
     font-family: 'gotham-bold';
-    src: url('fonts/gotham-bold-webfont.eot');
-    src: url('fonts/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/gotham-bold-webfont.woff') format('woff'),
-         url('fonts/gotham-bold-webfont.ttf') format('truetype'),
-         url('fonts/gotham-bold-webfont.svg#gothambold') format('svg');
+    src: url('fonts/gotham-bold.eot');
+    src: url('fonts/gotham-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gotham-bold.woff') format('woff'),
+         url('fonts/gotham-bold.ttf') format('truetype'),
+         url('fonts/gotham-bold.svg#gothambold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -61,44 +61,44 @@ figure {margin: 0;}
 
 @font-face {
     font-family: 'gotham-medium';
-    src: url('fonts/gotham-medium-webfont.eot');
-    src: url('fonts/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/gotham-medium-webfont.woff') format('woff'),
-         url('fonts/gotham-medium-webfont.ttf') format('truetype'),
-         url('fonts/gotham-medium-webfont.svg#gothambold') format('svg');
+    src: url('fonts/gotham-medium.eot');
+    src: url('fonts/gotham-medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gotham-medium.woff') format('woff'),
+         url('fonts/gotham-medium.ttf') format('truetype'),
+         url('fonts/gotham-medium.svg#gothambold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'gotham-light';
-    src: url('fonts/gotham-light-webfont.eot');
-    src: url('fonts/gotham-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/gotham-light-webfont.woff') format('woff'),
-         url('fonts/gotham-light-webfont.ttf') format('truetype'),
-         url('fonts/gotham-light-webfont.svg#gothamlight') format('svg');
+    src: url('fonts/gotham-light.eot');
+    src: url('fonts/gotham-light.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gotham-light.woff') format('woff'),
+         url('fonts/gotham-light.ttf') format('truetype'),
+         url('fonts/gotham-light.svg#gothamlight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'gandhi-serif';
-    src: url('fonts/gandhiserif-regular-webfont.eot');
-    src: url('fonts/gandhiserif-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/gandhiserif-regular-webfont.woff') format('woff'),
-         url('fonts/gandhiserif-regular-webfont.ttf') format('truetype'),
-         url('fonts/gandhiserif-regular-webfont.svg#gandhi_serifregular') format('svg');
+    src: url('fonts/gandhiserif-regular.eot');
+    src: url('fonts/gandhiserif-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gandhiserif-regular.woff') format('woff'),
+         url('fonts/gandhiserif-regular.ttf') format('truetype'),
+         url('fonts/gandhiserif-regular.svg#gandhi_serifregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'gandhi-serifitalic';
-    src: url('fonts/gandhiserif-italic-webfont.eot');
-    src: url('fonts/gandhiserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/gandhiserif-italic-webfont.woff') format('woff'),
-         url('fonts/gandhiserif-italic-webfont.ttf') format('truetype'),
-         url('fonts/gandhiserif-italic-webfont.svg#gandhi_serifitalic') format('svg');
+    src: url('fonts/gandhiserif-italic.eot');
+    src: url('fonts/gandhiserif-italic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gandhiserif-italic.woff') format('woff'),
+         url('fonts/gandhiserif-italic.ttf') format('truetype'),
+         url('fonts/gandhiserif-italic.svg#gandhi_serifitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -121,7 +121,7 @@ figure {margin: 0;}
 	font: normal @size/@line-height 'gotham-medium', 'Helvetica Neue', Calibri, Arial, Helvetica, sans-serif;
 }
 
-.gotham-medium( @size: 14px, @line-height: 18px ){
+.gotham-bold( @size: 14px, @line-height: 18px ){
 	font: normal @size/@line-height 'gotham-bold', 'Helvetica Neue', Calibri, Arial, Helvetica, sans-serif;
 }
 
@@ -149,33 +149,78 @@ figure {margin: 0;}
 .block{ display: block; }
 .inline{ display: inline; }
 
-.first{ margin-left: 0; padding-left: 0;}
-.last{ margin-right: 0; padding-right: 0;}
+.first{ margin-left: 0 !important; padding-left: 0 !important; border-left: none !important;}
+.last{ margin-right: 0 !important; padding-right: 0 !important; border-right: none !important; }
 
 .left{ float: left;}
 .right{ float: right;}
 
-.width{ width: 1024px; margin: auto; }
+.width{ width: 90%; max-width: 1024px; margin: 0 auto 20px auto; }
 
-.mitad{  }
+.mitad{ width: 44%;
+    &.uno{ margin: 0 2% 0 4%; }
+    &.dos{ margin: 0 4% 0 2%; }
+}
 .cuarto{ width: 21%; margin: 0 2%; }
 .tercio{ width: 31%; margin: 0 1%; }
+.quinto{ width: 16%; margin: 0 2%; }
 
 .center{ text-align: center; }
 
 .centro-absoluto{ width: 100%; height: 100%; position: absolute; top: 50%; left: 50%; }
 .in-centro-absoluto{ display: block; width: auto; margin-top: -5%; margin-left: -50%; }
 
+.ancho-img{
+    img{ width: 100%; height: auto; display: block; }
+}
+
 /*** GENERAL ***/
 
 html, body{ height: 100%; }
 
-.container{border-top: 5px solid @highlight; width: 100%; min-width: 360px; height: 100%; position: relative; overflow: hidden; }
+h2{ margin: 0; .gotham-bold(48px); text-align: center; text-transform: uppercase; letter-spacing: 0.5em; color: @claro; }
+h3{ margin: 0 0 10px 0; .gotham-medium(30px, 30px); text-align: center; text-transform: uppercase; letter-spacing: 0.3em; color: @highlight; }
+h4{ margin: 0; .gotham-light(18px); color: @highlight; text-transform: uppercase; letter-spacing: 0.2em; }
+
+p{ .gandhi-regular( 18px, 30px ); color: @texto;
+    span{ .gandhi-italic( 18px, 30px ); color: @highlight; }
+}
+
+.container{border-top: 5px solid @highlight; width: 100%; min-width: 320px; position: relative; overflow: hidden; }
+
+.seccion{}
 
 /*** HEADER ***/
 
-#centrar{ width: 65%; float: left; position: relative; left: 50%; top: 15%;
-	img{ width: 100%; height: auto; float: left; position: relative; left: -50%; }
+.centrar{ position: relative; left: 50%; top: 30%;
+	img{ width: 30%; height: auto; position: relative; left: -15%; }
 }
 
-.menu{ position: relative; top: 10%; }
+.menu{ width: 80%; position: relative; top: 40%;
+    ul{ margin: 0; list-style: none;
+        li{ width: 20%; float: left; .gotham-light(18px, 18px); text-transform: uppercase; text-align: center;
+            a{ display: block; width: 100%; border-right: 1px solid @highlight; color: @highlight; text-decoration: none; }
+        }
+    }
+}
+
+/*** TITULOS ***/
+.titulo{ margin-bottom: 60px;
+    &.servicios{ background: url('images/servicios.jpg') no-repeat @highlight fixed center; background-size: cover; }
+    &.clientes{ background: url('images/servicios.jpg') no-repeat @highlight fixed center; background-size: cover; }
+    &.planta{ background: url('images/servicios.jpg') no-repeat @highlight fixed center; background-size: cover; }
+    &.nosotros{ background: url('images/servicios.jpg') no-repeat @highlight fixed center; background-size: cover; }
+    &.contacto{ background: url('images/servicios.jpg') no-repeat @highlight fixed center; background-size: cover; }
+}
+
+/*** BULLETS ***/
+.bullet{
+    img{ display: block; width: 70%; margin: 0 auto 20px auto; }
+    p{ text-align: center; }
+}
+
+/*** CLIENTES ***/
+
+.clientes{
+    .quinto{ margin-bottom: 40px; }
+}

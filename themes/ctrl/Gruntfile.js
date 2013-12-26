@@ -61,6 +61,9 @@ module.exports = function(grunt) {
         },
         // running `grunt watch` will watch for changes
         watch: {
+            options:{
+                livereload: true
+            },
             css: {
                 files: "*.less",
                 tasks: ["less"]
@@ -69,14 +72,28 @@ module.exports = function(grunt) {
                 files: "js/*.js",
                 tasks: ["uglify"]
             }
+        },
+        express:{
+            all:{
+                options:{
+                    port: 8888,
+                    hostname: 'localhost',
+                    base: ['.'],
+                    livereload: true
+                }
+            }
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    // Load Grunt tasks automatically
+    require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
 
+    // Default task(s).
+    grunt.registerTask('default', ['jshint','uglify','less','imagemin']);
     //Watch
     grunt.registerTask('dev', [ 'watch' ]);
+
+    //Serer
+    grunt.registerTask('server', [ 'express', 'watch' ]);
 
 };
