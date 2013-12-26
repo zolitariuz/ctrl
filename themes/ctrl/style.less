@@ -224,3 +224,16 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 .clientes{
     .quinto{ margin-bottom: 40px; }
 }
+
+/*** CONTACTO ***/
+
+.form-contacto{
+
+    input, textarea{ width: 100%; padding: 2%; border: 1px solid @highlight; .gotham-light(18px); color: @texto; text-transform: uppercase; }
+
+    input{ margin: 0 0 10px 0;
+        &[type='text']{}
+        &[type='submit']{ background: @highlight; color: @claro; text-align: center; }
+    }
+    textarea{ }
+}
