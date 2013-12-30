@@ -1,4 +1,4 @@
-<div class="titulo contacto seccion">
+<div id="contacto" class="titulo contacto seccion">
 
 	<h2>Contacto</h2>
 
@@ -13,7 +13,7 @@
 
 		<textarea name="mensaje" id="">Mensaje</textarea>
 
-		<input type="submir" value="Enviar">
+		<input type="submit" value="Enviar">
 	</form>
 
 	<div class="left">

@@ -1,5 +1,4 @@
-
-<div class="titulo nosotros seccion">
+<div id="nosotros" class="titulo nosotros seccion">
 
 	<h2>Nosotros</h2>
 

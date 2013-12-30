@@ -1,4 +1,4 @@
-<div class="titulo planta seccion">
+<div id="planta" class="titulo planta seccion">
 
 	<h2>Planta productiva</h2>
 

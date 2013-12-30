@@ -56,7 +56,6 @@ figure {margin: 0;}
          url('fonts/gotham-bold.svg#gothambold') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -176,6 +175,9 @@ figure {margin: 0;}
 
 /*** GENERAL ***/
 
+::selection{ background: @highlight; color: @claro; }
+::-moz-selection { background: @highlight; color: @claro; }
+
 html, body{ height: 100%; }
 
 h2{ margin: 0; .gotham-bold(48px); text-align: center; text-transform: uppercase; letter-spacing: 0.5em; color: @claro; }
@@ -235,5 +237,5 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
         &[type='text']{}
         &[type='submit']{ background: @highlight; color: @claro; text-align: center; }
     }
-    textarea{ }
+    textarea{ height: 160px; }
 }

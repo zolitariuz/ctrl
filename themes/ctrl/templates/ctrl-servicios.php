@@ -1,4 +1,4 @@
-<div class="titulo servicios seccion">
+<div id="servicios" class="titulo servicios seccion">
 
 	<h2>Nuestros servicios</h2>
 
