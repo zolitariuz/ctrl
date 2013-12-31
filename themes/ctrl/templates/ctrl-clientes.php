@@ -6,114 +6,25 @@
 
 <div class="clientes seccion width clearfix">
 
-	<div class="clear">
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
+	<?php
+		$count = 1;
+		$clientes_args = array(
+			'post_type' 	 => 'cliente',
+			'posts_per_page' => -1,
+			'order' 		 => 'ASC'
+		);
+		$clientes_query = new WP_Query($clientes_args);
+
+		if( $clientes_query->have_posts() ) : while( $clientes_query->have_posts() ) : $clientes_query->the_post();
+	?>
 
 		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
+			<?php the_post_thumbnail('full'); ?>
 		</div>
 
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
+	<?php
 
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-	</div>
-
-	<div class="clear">
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-	</div>
-
-	<div class="clear">
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-	</div>
-
-	<div class="clear">
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-	</div>
-
-	<div class="clear">
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/citizen.png" alt="">
-		</div>
-
-		<div class="quinto left ancho-img">
-			<img src="<?php echo THEMEPATH; ?>images/interjet.png" alt="">
-		</div>
-	</div>
+		$count++; endwhile; endif;
+	?>
 
 </div><!-- clientes -->
