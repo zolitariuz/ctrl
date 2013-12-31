@@ -6,56 +6,28 @@
 
 <div class="seccion servicios width clearfix">
 
-	<div class="cuarto bullet left">
+	<?php
+		$servicios_args = array(
+			'post_type' 	 => 'servicio',
+			'posts_per_page' => -1,
+			'order' 		 => 'ASC'
+		);
+		$servicios_query = new WP_Query($servicios_args);
 
-		<img src="<?php echo THEMEPATH; ?>images/imprenta.png" alt="">
+		if( $servicios_query->have_posts() ) : while( $servicios_query->have_posts() ) : $servicios_query->the_post();
+	?>
 
-		<h3>Imprenta</h3>
+		<div class="cuarto bullet left">
 
-		<p>Impresión offset tradicional</p>
-		<p>Impresión digital</p>
-		<p>Encuadernación</p>
-		<p>Acabados</p>
-		<p>Impresión gran formato</p>
-	</div><!-- cuarto -->
+			<?php the_post_thumbnail('full'); ?>
 
-	<div class="cuarto bullet left">
+			<h3><?php the_title(); ?></h3>
 
-		<img src="<?php echo THEMEPATH; ?>images/diseno.png" alt="">
+			<?php the_content(); ?>
 
-		<h3>Diseño</h3>
+		</div><!-- cuarto -->
 
-		<p>Concepto creativo</p>
-		<p>Identidad corporativa</p>
-		<p>Editorial</p>
-		<p>Retoque digital</p>
-		<p>Pre-prensa</p>
-	</div><!-- cuarto -->
+	<?php endwhile; endif; ?>
 
-	<div class="cuarto bullet left">
-
-		<img src="<?php echo THEMEPATH; ?>images/web.png" alt="">
-
-		<h3>Web</h3>
-
-		<p>Impresión offset tradicional</p>
-		<p>Impresión digital</p>
-		<p>Encuadernación</p>
-		<p>Acabados</p>
-		<p>Impresión gran formato</p>
-	</div><!-- cuarto -->
-
-	<div class="cuarto bullet left">
-
-		<img src="<?php echo THEMEPATH; ?>images/mas.png" alt="">
-
-		<h3>Más</h3>
-
-		<p>Impresión offset tradicional</p>
-		<p>Impresión digital</p>
-		<p>Encuadernación</p>
-		<p>Acabados</p>
-		<p>Impresión gran formato</p>
-	</div><!-- cuarto -->
 
 </div><!-- servicios -->
