@@ -215,7 +215,8 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
     ul{ margin: 0; list-style: none;
         li{ width: 20%; float: left; .gotham-medium(18px, 18px); text-transform: uppercase; text-align: center; letter-spacing: 0.2em;
             a{ display: block; width: 100%; border-right: 1px solid @highlight; color: @texto; text-decoration: none;
-                &:hover, &.active{ color: @highlight; .transition( all 0.3s ease ); }
+                &:hover, &.active{ color: @highlight; }
+                &:hover{ .transition( all 0.3s ease ); }
             }
         }
     }

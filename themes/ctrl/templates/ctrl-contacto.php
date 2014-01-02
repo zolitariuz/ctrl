@@ -8,7 +8,7 @@
 
 	<form action="<?php echo site_url('contacto-recibido'); ?>" method="post" class="left tercio form-contacto">
 		<input name="nombre" type="text" value="Nombre" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" >
-		<input name="email" type="text" value="Correo" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" >
+		<input name="email" type="email" value="Correo" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" >
 		<input name="auto" type="text" value="Asunto" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" >
 
 		<textarea name="mensaje" name="mensaje" id="" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" >Mensaje</textarea>
