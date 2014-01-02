@@ -37,6 +37,10 @@
 					</ul>
 				</nav>
 
+				<?php if ( is_page('contacto-recibido') ){ ?>
+					<p class="contacto-recibido" ><em>Gracias por tu comentario, nos pondrémos en contacto contigo lo antes posible.</em></p>
+				<?php } ?>
+
 			</div><!-- header -->
 
 

@@ -6,25 +6,26 @@
 
 <div class="seccion nosotros width clearfix">
 
-	<div class="tercio bullet left">
+	<?php
+		$nosotros_args = array(
+			'post_type' 	 => 'nosotros',
+			'posts_per_page' => -1,
+			'order' 		 => 'ASC'
+		);
+		$nosotros_query = new WP_Query($nosotros_args);
 
-		<h3>Misión</h3>
+		if( $nosotros_query->have_posts() ) : while( $nosotros_query->have_posts() ) : $nosotros_query->the_post();
+	?>
 
-		<p>Lograr la <span>completa satisfacción</span> de nuestros clientes por la calidas de nuesras soluciones de gráficas en base a una mejora contínua, compañerismo y lealtad a la empresa.</p>
-	</div><!-- tercio -->
+		<div class="tercio bullet left">
 
-	<div class="tercio bullet left">
+			<h3><?php the_title(); ?></h3>
 
-		<h3>Visión</h3>
+			<p><?php the_content(); ?></p>
 
-		<p>Que la empresa logre un cecimiento sostenido, rentable y retador para la satisfacción de nuestro equipo de trabajo y así crear una imagen de <span> prestigio y confiabilidad</span>.</p>
-	</div><!-- tercio -->
+		</div><!-- tercio -->
 
-	<div class="tercio bullet left">
+	<?php endwhile; endif; ?>
 
-		<h3>Valores</h3>
-
-		<p>La integridad en el trabajo de nuestra empresa, se sustenta en la suna de los valores que día a día se practican y fortalecen para poder brimdar a nuestros clientes <span>un mejor serivicio</span>.</p>
-	</div><!-- tercio -->
 
 </div><!-- nosotros -->

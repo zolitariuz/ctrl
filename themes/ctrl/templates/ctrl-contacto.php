@@ -6,12 +6,12 @@
 
 <div class="seccion contacto width clearfix">
 
-	<form action="<?php echo site_url('contacto-recibido'); ?>" method="get" class="left tercio form-contacto">
-		<input type="text" value="Nombre">
-		<input type="text" value="Correo">
-		<input type="text" value="Asunto">
+	<form action="<?php echo site_url('contacto-recibido'); ?>" method="post" class="left tercio form-contacto">
+		<input name="nombre" type="text" value="Nombre" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" >
+		<input name="email" type="text" value="Correo" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" >
+		<input name="auto" type="text" value="Asunto" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" >
 
-		<textarea name="mensaje" id="">Mensaje</textarea>
+		<textarea name="mensaje" name="mensaje" id="" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" >Mensaje</textarea>
 
 		<input type="submit" value="Enviar">
 	</form>

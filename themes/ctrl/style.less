@@ -132,6 +132,19 @@ figure {margin: 0;}
 	font: italic @size/@line-height 'gandhi-italic', Georgia, "Times New Roman", Times, serif;
 }
 
+.box-shadow (@string) {
+    -webkit-box-shadow: @string;
+    -moz-box-shadow:    @string;
+    box-shadow:         @string;
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+}
+
 /*** FRAMEWORK ***/
 
 .clearfix {
@@ -185,7 +198,7 @@ h3{ margin: 0 0 10px 0; .gotham-medium(30px, 30px); text-align: center; text-tra
 h4{ margin: 0; .gotham-light(18px); color: @highlight; text-transform: uppercase; letter-spacing: 0.2em; }
 
 p{ .gandhi-regular( 18px, 30px ); color: @texto;
-    span{ .gandhi-italic( 18px, 30px ); color: @highlight; }
+    em{ .gandhi-italic( 18px, 30px ); color: @highlight; }
 }
 
 .container{border-top: 5px solid @highlight; width: 100%; min-width: 320px; position: relative; overflow: hidden; }
@@ -200,8 +213,10 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 
 .menu{ width: 80%; position: relative; top: 40%;
     ul{ margin: 0; list-style: none;
-        li{ width: 20%; float: left; .gotham-light(18px, 18px); text-transform: uppercase; text-align: center;
-            a{ display: block; width: 100%; border-right: 1px solid @highlight; color: @highlight; text-decoration: none; }
+        li{ width: 20%; float: left; .gotham-medium(18px, 18px); text-transform: uppercase; text-align: center; letter-spacing: 0.2em;
+            a{ display: block; width: 100%; border-right: 1px solid @highlight; color: @texto; text-decoration: none;
+                &:hover{ color: @highlight; .transition( all 0.3s ease ); }
+            }
         }
     }
 }
@@ -231,11 +246,15 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 
 .form-contacto{
 
-    input, textarea{ width: 100%; padding: 2%; border: 1px solid @highlight; .gotham-light(18px); color: @texto; text-transform: uppercase; }
+    input, textarea{ width: 100%; padding: 2%; border: 1px solid @highlight; .gotham-light(18px); color: @texto; text-transform: uppercase;
+        &:focus{ outline: 0; .box-shadow( 0 0 5px 1px @highlight ); .transition( all 0.2s ease ); }
+    }
 
     input{ margin: 0 0 10px 0;
         &[type='text']{}
-        &[type='submit']{ background: @highlight; color: @claro; text-align: center; }
+        &[type='submit']{ background: @highlight; color: @claro; text-align: center;
+            &:hover{ .box-shadow( 0 0 5px 1px @highlight ); .transition( all 0.2s ease ); }
+        }
     }
     textarea{ height: 160px; }
 }
