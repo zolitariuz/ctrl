@@ -4,10 +4,10 @@
 
 </div><!-- servicios -->
 
-<div class="clientes seccion width">
+<div class="seccion clientes width clearfix">
 
 	<?php
-		$count = 0;
+		$count = 1;
 		$clientes_args = array(
 			'post_type' 	 => 'cliente',
 			'posts_per_page' => -1,
@@ -17,23 +17,21 @@
 
 		if( $clientes_query->have_posts() ) : while( $clientes_query->have_posts() ) : $clientes_query->the_post();
 
-		if ( $count % 5 == 0 ){
-	?>
-		</div>
-		<div class="clear">
-	<?php
-		}
-	?>
+		if ( $count%5 == 1 ){ ?>
+			<div class="clear">
+		<?php } ?>
 
-		<div class="quinto left ancho-img">
-			<?php the_post_thumbnail('full'); ?>
+			<div class="quinto left ancho-img">
+				<?php the_post_thumbnail('full'); ?>
 
-			<p><?php the_title(); ?></p>
-		</div>
-
+				<p><?php the_title(); ?></p>
+			</div>
 	<?php
 
-		$count++; endwhile; endif;
+		if ( $count%5 == 0 ){ echo '</div>'; }
+		$count++;
+		endwhile; endif;
+		if ( $count%5 != 1 ){ echo '</div>'; }
 	?>
 
 </div><!-- clientes -->
