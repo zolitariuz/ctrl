@@ -27,17 +27,32 @@
 					</h1>
 				</div><!-- centrar -->
 
-				<nav id="nav" class="menu width">
-					<ul class="clearfix" >
-						<li><a href="#servicios">Servicios</a></li>
-						<li><a href="#clientes">Clientes</a></li>
-						<li><a href="#planta">Planta</a></li>
-						<li><a href="#nosotros">Nosotros</a></li>
-						<li><a class="last" href="#contacto">Contacto</a></li>
-					</ul>
-				</nav>
+				<?php if ( ! is_page('contacto-recibido') ){ ?>
 
-				<?php if ( is_page('contacto-recibido') ){ ?>
+					<nav id="nav" class="menu width">
+						<ul class="clearfix" >
+							<li><a href="#servicios">Servicios</a></li>
+							<li><a href="#clientes">Clientes</a></li>
+							<li><a href="#planta">Planta</a></li>
+							<li><a href="#nosotros">Nosotros</a></li>
+							<li><a class="last" href="#contacto">Contacto</a></li>
+						</ul>
+					</nav>
+
+				<?php }
+
+				if ( is_page('contacto-recibido') ){ ?>
+
+					<nav id="nav" class="menu width">
+						<ul class="clearfix" >
+							<li><a href="<?php echo home_url(); ?>#servicios">Servicios</a></li>
+							<li><a href="<?php echo home_url(); ?>#clientes">Clientes</a></li>
+							<li><a href="<?php echo home_url(); ?>#planta">Planta</a></li>
+							<li><a href="<?php echo home_url(); ?>#nosotros">Nosotros</a></li>
+							<li><a class="last" href="<?php echo home_url(); ?>#contacto">Contacto</a></li>
+						</ul>
+					</nav>
+
 					<p class="contacto-recibido" ><em>Gracias por tu comentario, nos pondrémos en contacto contigo lo antes posible.</em></p>
 				<?php } ?>
 

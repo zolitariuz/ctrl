@@ -215,11 +215,13 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
     ul{ margin: 0; list-style: none;
         li{ width: 20%; float: left; .gotham-medium(18px, 18px); text-transform: uppercase; text-align: center; letter-spacing: 0.2em;
             a{ display: block; width: 100%; border-right: 1px solid @highlight; color: @texto; text-decoration: none;
-                &:hover{ color: @highlight; .transition( all 0.3s ease ); }
+                &:hover, &.active{ color: @highlight; .transition( all 0.3s ease ); }
             }
         }
     }
 }
+
+.contacto-recibido{ width: 80%; margin: auto; position: relative; top: 50%; text-align: center; }
 
 /*** TITULOS ***/
 .titulo{ margin-bottom: 60px;
@@ -240,6 +242,8 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 
 .clientes{
     .quinto{ margin-bottom: 40px; }
+    img{ margin: 0 0 20px 0; }
+    p{ text-align: center; }
 }
 
 /*** CONTACTO ***/

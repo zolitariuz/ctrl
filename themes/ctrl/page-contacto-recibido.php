@@ -22,3 +22,5 @@
 	$mail_status = mail($mail_to, $subject, $body_message, $headers);
 
 	get_header();
+
+	get_footer();
