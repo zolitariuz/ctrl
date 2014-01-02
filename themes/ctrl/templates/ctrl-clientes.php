@@ -17,21 +17,21 @@
 
 		if( $clientes_query->have_posts() ) : while( $clientes_query->have_posts() ) : $clientes_query->the_post();
 
-		if ( $count%5 == 1 ){ ?>
-			<div class="clear">
+		if ( $count%4 == 1 ){ ?>
+			<div class="clearfix">
 		<?php } ?>
 
-			<div class="quinto left ancho-img">
+			<div class="cuarto left ancho-img">
 				<?php the_post_thumbnail('full'); ?>
 
 				<p><?php the_title(); ?></p>
 			</div>
 	<?php
 
-		if ( $count%5 == 0 ){ echo '</div>'; }
+		if ( $count%4 == 0 ){ echo '</div>'; }
 		$count++;
 		endwhile; endif;
-		if ( $count%5 != 1 ){ echo '</div>'; }
+		if ( $count%4 != 1 ){ echo '</div>'; }
 	?>
 
 </div><!-- clientes -->

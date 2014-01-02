@@ -16,7 +16,7 @@
 		<input type="submit" value="Enviar">
 	</form>
 
-	<div class="left">
+	<div class="left datos-contacto">
 		<h4>Dirección</h4>
 		<p>Gladiolas 18 Izcalli Cuauhtémoc I, Metepec, México, C.P. 52176.</p>
 

@@ -31,7 +31,7 @@
 
 		$('.header').height(alto);
 		$('.titulo').height(alto/2);
-		$('h2').css('line-height', (alto/2)+'px');
+		//$('h2').css('line-height', (alto/2)+'px');
 
 		//Resize
 		$(window).resize(function(){
@@ -39,7 +39,7 @@
 
 			$('.header').height(alto);
 			$('.titulo').height(alto/2);
-			$('h2').css('line-height', (alto/2)+'px');
+			//$('h2').css('line-height', (alto/2)+'px');
 		});
 
 		$('a[href*=#]').each(function() {

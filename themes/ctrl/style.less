@@ -193,7 +193,7 @@ figure {margin: 0;}
 
 html, body{ height: 100%; }
 
-h2{ margin: 0; .gotham-bold(48px); text-align: center; text-transform: uppercase; letter-spacing: 0.5em; color: @claro; }
+h2{ margin: 0; .gotham-bold(48px, 48px); text-align: center; text-transform: uppercase; letter-spacing: 0.5em; color: @claro; position: relative; top: 49%; }
 h3{ margin: 0 0 10px 0; .gotham-medium(30px, 30px); text-align: center; text-transform: uppercase; letter-spacing: 0.3em; color: @highlight; }
 h4{ margin: 0; .gotham-light(18px); color: @highlight; text-transform: uppercase; letter-spacing: 0.2em; }
 
@@ -241,7 +241,7 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 /*** CLIENTES ***/
 
 .clientes{
-    .quinto{ margin-bottom: 40px; }
+    .cuarto{ margin-bottom: 1em; }
     img{ margin: 0 0 20px 0; }
     p{ text-align: center; }
 }
@@ -250,15 +250,90 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 
 .form-contacto{
 
-    input, textarea{ width: 100%; padding: 2%; border: 1px solid @highlight; .gotham-light(18px); color: @texto; text-transform: uppercase;
+    input, textarea{ width: 100%; padding: 2%; border: 1px solid @highlight; margin: 0 0 10px 0; .gotham-light(18px); color: @texto; text-transform: uppercase;
         &:focus{ outline: 0; .box-shadow( 0 0 5px 1px @highlight ); .transition( all 0.2s ease ); }
     }
 
-    input{ margin: 0 0 10px 0;
+    input{
         &[type='text']{}
         &[type='submit']{ background: @highlight; color: @claro; text-align: center;
             &:hover{ .box-shadow( 0 0 5px 1px @highlight ); .transition( all 0.2s ease ); }
         }
     }
     textarea{ height: 160px; }
+}
+
+@media only screen and (max-width : 1024px) {
+
+    h2{ .gotham-bold(42px, 48px); top: 40%; }
+    h3{ .gotham-medium(24px, 24px); }
+
+    p{ margin-bottom: 0.5em; .gandhi-regular( 16px, 24px );
+        em{ .gandhi-italic( 16px, 24px ); }
+    }
+
+    .centrar{
+        img{ width: 40%; left: -20%; }
+    }
+
+    .menu{ width: 90%; }
+
+}
+
+@media only screen and (max-width : 830px) {
+
+    .cuarto{ width: 46%; margin-bottom: 1.3em;
+        img{ width: 30%; }
+    }
+
+    .tercio{ width: 29%; margin: 0 2%; }
+
+    .clientes{
+        img{ width: 70%; margin: 0 auto 1em auto; }
+    }
+
+}
+
+@media only screen and (max-width : 767px) {
+
+    .form-contacto{ width: 100%; margin-bottom: 1em; }
+
+    .datos-contacto{ width: 100%; margin: 0% 2%; text-align: center; }
+
+}
+
+@media only screen and (max-width : 648px) {
+
+    .centrar{
+        img{ width: 60%; left: -30%; }
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+
+    .centrar{
+        img{ width: 70%; left: -35%; }
+    }
+
+    h2{ .gotham-bold(36px, 42px); top: 40%; }
+    h3{ .gotham-medium(30px, 30px); }
+
+    p{ margin-bottom: 0.5em; .gandhi-regular( 18px, 24px ); }
+
+
+    .cuarto{ width: 98%; margin: 0 1% 2em 1%;
+        img{ display: none; }
+    }
+
+    .tercio{ width: 98%; margin: 0 1% 2em 1%; }
+
+    .mitad{ width: 98%; margin: 0 1% 2em 1% !important; }
+
+}
+
+@media only screen and (max-width : 480px) {
+
+    h2{ .gotham-bold(30px, 38px); top: 40%; }
+
 }
