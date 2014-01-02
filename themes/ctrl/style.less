@@ -288,6 +288,17 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 
     .tercio{ width: 29%; margin: 0 2%; }
 
+    .centrar{ top: 20%; }
+
+    .menu{ width: 50%; top: 30%;
+        ul{
+            li{ width: 100%; .gotham-medium(22px, 22px);
+                a{ width: auto; margin: 0.7em 0; padding-bottom: 0.7em; border-right: none; border-bottom: 1px solid @highlight;}
+            }
+        }
+
+    }
+
     .clientes{
         img{ width: 70%; margin: 0 auto 1em auto; }
     }
@@ -312,11 +323,13 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 
 @media only screen and (max-width : 480px) {
 
-    .centrar{
+    .centrar{ top: 10%;
         img{ width: 70%; left: -35%; }
     }
 
-    h2{ .gotham-bold(36px, 42px); top: 40%; }
+    .menu{ width: 80%; top: 20%; }
+
+    h2{ .gotham-bold(30px, 38px); top: 40%; }
     h3{ .gotham-medium(30px, 30px); }
 
     p{ margin-bottom: 0.5em; .gandhi-regular( 18px, 24px ); }
@@ -329,11 +342,5 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
     .tercio{ width: 98%; margin: 0 1% 2em 1%; }
 
     .mitad{ width: 98%; margin: 0 1% 2em 1% !important; }
-
-}
-
-@media only screen and (max-width : 480px) {
-
-    h2{ .gotham-bold(30px, 38px); top: 40%; }
 
 }
