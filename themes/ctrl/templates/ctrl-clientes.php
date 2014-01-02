@@ -20,6 +20,8 @@
 
 		<div class="quinto left ancho-img">
 			<?php the_post_thumbnail('full'); ?>
+
+			<p><?php the_title(); ?></p>
 		</div>
 
 	<?php
