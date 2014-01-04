@@ -211,9 +211,9 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 	img{ width: 30%; height: auto; position: relative; left: -15%; }
 }
 
-.menu{ width: 80%; position: relative; top: 40%;
+.menu{ width: 90%; position: relative; top: 40%;
     ul{ margin: 0; list-style: none;
-        li{ width: 20%; float: left; .gotham-medium(18px, 18px); text-transform: uppercase; text-align: center; letter-spacing: 0.2em;
+        li{ width: 16.5%; float: left; .gotham-medium(16px, 16px); text-transform: uppercase; text-align: center; letter-spacing: 0.2em;
             a{ display: block; width: 100%; border-right: 1px solid @highlight; color: @texto; text-decoration: none;
                 &:hover, &.active{ color: @highlight; }
                 &:hover{ .transition( all 0.3s ease ); }
@@ -283,7 +283,13 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
         img{ width: 40%; left: -20%; }
     }
 
-    .menu{ width: 90%; }
+    .menu{
+        ul{
+            li{ width: 31%; margin: 0 1% 1em 1%; .gotham-medium(20px, 20px);
+                a{ padding-bottom: 1em; border-right: 0; border-bottom: 1px solid @highlight; }
+            }
+        }
+    }
 
 }
 
@@ -296,15 +302,6 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
     .tercio{ width: 29%; margin: 0 2%; }
 
     .centrar{ top: 20%; }
-
-    .menu{ width: 50%; top: 30%;
-        ul{
-            li{ width: 100%; .gotham-medium(22px, 22px);
-                a{ width: auto; margin: 0.7em 0; padding-bottom: 0.7em; border-right: none; border-bottom: 1px solid @highlight;}
-            }
-        }
-
-    }
 
     .clientes{
         img{ width: 70%; margin: 0 auto 1em auto; }
@@ -322,8 +319,17 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 
 @media only screen and (max-width : 648px) {
 
-    .centrar{
+    .centrar{ top: 10%;
         img{ width: 60%; left: -30%; }
+    }
+
+    .menu{ width: 50%; top: 15%;
+        ul{
+            li{ width: 100%; margin-bottom: 0;
+                a{ width: auto; margin: 0.7em 0; padding-bottom: 0.7em; border-right: none; border-bottom: 1px solid @highlight;}
+            }
+        }
+
     }
 
 }
