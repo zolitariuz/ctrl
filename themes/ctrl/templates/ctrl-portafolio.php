@@ -21,8 +21,13 @@
 
 <div class="seccion portafolio width clearfix">
 
-	<?php
-		$nosotros_args = array(
+	<div class="cycle-slideshow"
+		data-cycle-fx="scrollHorz"
+		data-cycle-swipe="true"
+	>
+
+		<?php
+		$portafolio_args = array(
 			'post_type' 	 => 'portafolio',
 			'posts_per_page' => -1,
 			'order' 		 => 'ASC'
@@ -30,17 +35,14 @@
 		$portafolio_query = new WP_Query($portafolio_args);
 
 		if( $portafolio_query->have_posts() ) : while( $portafolio_query->have_posts() ) : $portafolio_query->the_post();
-	?>
 
-		<div class="tercio bullet left">
+			the_post_thumbnail( 'portafolio' );
 
-			<h3><?php the_title(); ?></h3>
+		endwhile; endif; ?>
 
-			<p><?php the_content(); ?></p>
+		<div class="cycle-pager"></div>
 
-		</div><!-- tercio -->
-
-	<?php endwhile; endif; ?>
+	</div><!-- cycle-slideshow -->
 
 
 </div><!-- portafolio -->

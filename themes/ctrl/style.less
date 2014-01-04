@@ -258,6 +258,18 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
     textarea{ height: 160px; }
 }
 
+/*** PORTAFOLIO ***/
+
+.cycle-slideshow{ width: 100%;
+    img{ width: 100%; height: auto; }
+}
+
+.cycle-pager{ width: 100%; margin-top: 1em; text-align: center;
+    span{ color: @texto; font-size: 3em; cursor: pointer;
+        &.cycle-pager-active{ color: @highlight; }
+    }
+}
+
 @media only screen and (max-width : 1024px) {
 
     h2{ .gotham-bold(42px, 48px); top: 40%; }
@@ -338,4 +350,7 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 
     .mitad{ width: 98%; margin: 0 1% 2em 1% !important; }
 
+    .cycle-pager{
+        span{ font-size: 2em; }
+    }
 }

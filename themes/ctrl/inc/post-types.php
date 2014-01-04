@@ -135,4 +135,36 @@
 		);
 		register_post_type( 'cover', $args );
 
+		// Portafolio
+		$labels = array(
+			'name'          => 'Portafolio',
+			'singular_name' => 'Portafolio',
+			'add_new'       => 'Nueva Portafolio',
+			'add_new_item'  => 'Nueva Portafolio',
+			'edit_item'     => 'Editar Portafolio',
+			'new_item'      => 'Nueva Portafolio',
+			'all_items'     => 'Todas',
+			'view_item'     => 'Ver Portafolio',
+			'search_items'  => 'Buscar Portafolio',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Portafolio'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'portafolio' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 6,
+			'taxonomies'         => array( 'category' ),
+			'supports'           => array( 'title', 'editor', 'thumbnail' )
+		);
+		register_post_type( 'portafolio', $args );
+
 	});
