@@ -1,8 +1,23 @@
-<div id="clientes" class="titulo clientes seccion">
+<?php
+	$back_clientes_args = array(
+		'post_type' => 'cover',
+		'category_name'  => 'clientes'
+	);
+
+	$back_clientes_query = new WP_Query( $back_clientes_args );
+
+	if( $back_clientes_query->have_posts() ) : while( $back_clientes_query->have_posts() ) : $back_clientes_query->the_post();
+
+		$back_clientes  = wp_get_attachment_image_src(  get_post_thumbnail_id( $post->ID ) , 'full' );
+
+	endwhile; endif;
+?>
+
+<div id="clientes" class="titulo clientes seccion" style="background-image: url('<?php echo $back_clientes[0]; ?>'); " >
 
 	<h2>Clientes</h2>
 
-</div><!-- servicios -->
+</div><!-- clientes -->
 
 <div class="seccion clientes width clearfix">
 

@@ -1,4 +1,19 @@
-<div id="contacto" class="titulo contacto seccion">
+<?php
+	$back_contacto_args = array(
+		'post_type' => 'cover',
+		'category_name'  => 'contacto'
+	);
+
+	$back_contacto_query = new WP_Query( $back_contacto_args );
+
+	if( $back_contacto_query->have_posts() ) : while( $back_contacto_query->have_posts() ) : $back_contacto_query->the_post();
+
+		$back_contacto  = wp_get_attachment_image_src(  get_post_thumbnail_id( $post->ID ) , 'full' );
+
+	endwhile; endif;
+?>
+
+<div id="contacto" class="titulo contacto seccion" style="background-image: url('<?php echo $back_contacto[0]; ?>'); " >
 
 	<h2>Contacto</h2>
 

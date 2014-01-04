@@ -1,4 +1,19 @@
-<div id="planta" class="titulo planta seccion">
+<?php
+	$back_planta_args = array(
+		'post_type' => 'cover',
+		'category_name'  => 'planta'
+	);
+
+	$back_planta_query = new WP_Query( $back_planta_args );
+
+	if( $back_planta_query->have_posts() ) : while( $back_planta_query->have_posts() ) : $back_planta_query->the_post();
+
+		$back_planta  = wp_get_attachment_image_src(  get_post_thumbnail_id( $post->ID ) , 'full' );
+
+	endwhile; endif;
+?>
+
+<div id="planta" class="titulo planta seccion" style="background-image: url('<?php echo $back_planta[0]; ?>'); " >
 
 	<h2>Planta productiva</h2>
 

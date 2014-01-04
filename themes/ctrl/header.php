@@ -32,6 +32,7 @@
 					<nav id="nav" class="menu width">
 						<ul class="clearfix" >
 							<li><a href="#servicios">Servicios</a></li>
+							<li><a href="#portafolio">Portafolio</a></li>
 							<li><a href="#clientes">Clientes</a></li>
 							<li><a href="#planta">Planta</a></li>
 							<li><a href="#nosotros">Nosotros</a></li>
