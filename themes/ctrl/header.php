@@ -47,6 +47,7 @@
 					<nav id="nav" class="menu width">
 						<ul class="clearfix" >
 							<li><a href="<?php echo home_url(); ?>#servicios">Servicios</a></li>
+							<li><a href="<?php echo home_url(); ?>#portafolio">Portafolio</a></li>
 							<li><a href="<?php echo home_url(); ?>#clientes">Clientes</a></li>
 							<li><a href="<?php echo home_url(); ?>#planta">Planta</a></li>
 							<li><a href="<?php echo home_url(); ?>#nosotros">Nosotros</a></li>

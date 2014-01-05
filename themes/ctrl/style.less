@@ -365,12 +365,18 @@ p{ .gandhi-regular( 18px, 30px ); color: @texto;
 @media only screen
 and (min-width : 321px) {
 
-    .menu{
+    .centrar{ top: 10%;
+        img{ width: 60%; left: -30%; }
+    }
+
+    .menu{ width: 90%;
         ul{
-            li{ width: 31%; margin: 0 1% 1em 1%; .gotham-medium(20px, 20px);
+            li{ width: 31%; margin: 0 1% 1em 1%; .gotham-medium(18px, 18px);
                 a{ padding-bottom: 1em; border-right: 0; border-bottom: 1px solid @highlight; }
             }
         }
     }
+
+    h2{ .gotham-bold(24px, 24px); }
 
 }
