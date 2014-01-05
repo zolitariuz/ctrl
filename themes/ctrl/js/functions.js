@@ -44,7 +44,7 @@
 			alto_ventana = $(window).height(),
 			alto_menu	 = $('#nav').height(),
 			alto_logo	 = $('.centrar').height(),
-			alto_total	 = alto_menu + alto_logo;
+			alto_total	 = alto_menu + alto_logo + 100;
 
 			$('.header').height(alto_ventana);
 			$('.titulo').height(alto_ventana/2);
