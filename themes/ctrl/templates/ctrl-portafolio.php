@@ -24,6 +24,7 @@
 	<div class="cycle-slideshow"
 		data-cycle-fx="scrollHorz"
 		data-cycle-swipe="true"
+		data-cycle-log="false"
 	>
 
 		<?php
