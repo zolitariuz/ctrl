@@ -27,7 +27,7 @@
 					</h1>
 				</div><!-- centrar -->
 
-				<?php if ( ! is_page('contacto-recibido') ){ ?>
+				<?php if ( ! is_page('contacto-recibido') && 'portafolio' !== get_post_type() ){ ?>
 
 					<nav id="nav" class="menu width">
 						<ul class="clearfix" >
@@ -56,6 +56,21 @@
 					</nav>
 
 					<p class="contacto-recibido" ><em>Gracias por tu comentario, nos pondrémos en contacto contigo lo antes posible.</em></p>
+				<?php }
+
+				if ( 'portafolio' == get_post_type() ){ ?>
+
+					<nav id="nav" class="menu width">
+						<ul class="clearfix" >
+							<li><a href="<?php echo home_url(); ?>#servicios">Servicios</a></li>
+							<li><a href="<?php echo home_url(); ?>#portafolio">Portafolio</a></li>
+							<li><a href="<?php echo home_url(); ?>#clientes">Clientes</a></li>
+							<li><a href="<?php echo home_url(); ?>#planta">Planta</a></li>
+							<li><a href="<?php echo home_url(); ?>#nosotros">Nosotros</a></li>
+							<li><a class="last" href="<?php echo home_url(); ?>#contacto">Contacto</a></li>
+						</ul>
+					</nav>
+
 				<?php } ?>
 
 			</div><!-- header -->

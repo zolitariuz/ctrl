@@ -21,29 +21,21 @@
 
 <div class="seccion portafolio width clearfix">
 
-	<div class="cycle-slideshow"
-		data-cycle-fx="scrollHorz"
-		data-cycle-swipe="true"
-		data-cycle-log="false"
-	>
+	<a href="<?php echo site_url('portafolio/?seccion=imprenta'); ?>" class="cuarto left">
+		Imprenta
+	</a><!-- cuarto -->
 
-		<?php
-		$portafolio_args = array(
-			'post_type' 	 => 'portafolio',
-			'posts_per_page' => -1,
-			'order' 		 => 'ASC'
-		);
-		$portafolio_query = new WP_Query($portafolio_args);
+	<a href="<?php echo site_url('portafolio/?seccion=diseno'); ?>" class="cuarto left">
+		Diseño
+	</a><!-- cuarto -->
 
-		if( $portafolio_query->have_posts() ) : while( $portafolio_query->have_posts() ) : $portafolio_query->the_post();
+	<a href="<?php echo site_url('portafolio/?seccion=web'); ?>" class="cuarto left">
+		Web
+	</a><!-- cuarto -->
 
-			the_post_thumbnail( 'portafolio' );
-
-		endwhile; endif; ?>
-
-		<div class="cycle-pager"></div>
-
-	</div><!-- cycle-slideshow -->
+	<a href="<?php echo site_url('portafolio/?seccion=mas'); ?>" class="cuarto left">
+		Más
+	</a><!-- cuarto -->
 
 
 </div><!-- portafolio -->
